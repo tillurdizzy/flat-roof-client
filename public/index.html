@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Evolution Conduit Support Systems</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+    <meta http-equiv="pragma" content="no-cache">
+    <script src="bundle.js?v=2"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700italic' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Jaldi:400,700' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/app.css?v=5" />
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body ng-app="app" ng-cloak>
+    <div class="top-bar">
+        <div>
+            <h1 class="XXX">Evolution Conduit Support Systems</h1></div>
+    </div>
+    <div class="flex-row">
+        <div>
+        </div>
+        <div class="side-nav" ng-controller="NavCtrl as Ctrl">
+            <button class="XXX" ng-class="{ 'md-primary': Ctrl.isCurrentPath('home')}" ng-click="Ctrl.goNav('home.active');"> Home </button>
+            <button class="XXX" ng-class="{ 'md-primary': Ctrl.isCurrentPath('illustrations')}" ng-click="Ctrl.goNav('illustrations');"> Illustrations </button>
+            <button class="XXX" ng-class="{ 'md-primary': Ctrl.isCurrentPath('inventory')}" ng-click="Ctrl.goNav('inventory');"> Inventory </button>
+            <add-space heightpx="20"></add-space>
+            <div ng-show="Ctrl.jobSelected">
+                <div class="section-label" ng-click="Ctrl.toggleInput()">
+                    <h4>Input</h4></div>
+                <div ng-show="Ctrl.inputOpen">
+                   
+                </div>
+                <add-space heightpx="20"></add-space>
+                <div class="section-label" ng-click="Ctrl.toggleDesign()">
+                    <h4>Design</h4></div>
+                <div ng-show="Ctrl.designOpen">
+                    
+                </div>
+                <add-space heightpx="20"></add-space>
+                <div class="section-label" ng-click="Ctrl.toggleResult()">
+                    <h4>Results</h4></div>
+                <div ng-show="Ctrl.resultOpen">
+                   
+                </div>
+            </div>
+        </div>
+        <div ui-view class="view-container"></div>
+    </div>
+   
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+    <script src="myApp.js?v=3"></script>
+    <!--Global Services-->
+    <script src="js/data.srvc.js?v=3"></script>
+    <script src="js/shared.srvc.js?v=3"></script>
+    <script src="js/list.srvc.js?v=3"></script>
+    <script src="js/tabbedMenu.ctrl.js?v=3"></script>
+    <script src="js/nav.ctrl.js?v=2"></script>
+    <!--Directives-->
+    <script src="js/directives/hrule.dir.js?v=2"></script>
+    <script src="js/directives/space.dir.js?v=2"></script>
+    
+    
+    <!--Modules-->
+    <!--Controllers-->
+    <script src="views/home/home.ctrl.js?v=2"></script>
+    
+</body>
+
+</html>

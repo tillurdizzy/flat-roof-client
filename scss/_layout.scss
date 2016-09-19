@@ -1,0 +1,74 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.top-bar {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000;
+    h1 {
+        color: #000;
+        line-height: 1;
+        vertical-align: middle;
+        margin: 0 0 0 .5rem;
+        padding: 0;
+        font-size: 18px;
+    }
+}
+
+.view-container {
+    margin: 5px 0 0 20px;
+    width:810px;
+}
+
+
+//////////////////////////////FlexBox
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+// This will center a single item in a div
+.centered-item {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-row-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    div {
+        margin-right: 1rem;
+    }
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-space-between {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.hrule {
+    border-top: 2px solid #000000;
+    width: 100%;
+    clear: both;
+    content: '';
+    display: block;
+}
+
+
