@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Evolution Conduit Support Systems</title>
+    <title>Flat Roof Options</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -18,40 +18,24 @@
 </head>
 
 <body ng-app="app" ng-cloak>
-    <div class="top-bar">
-        <div>
-            <h1 class="XXX">Evolution Conduit Support Systems</h1></div>
-    </div>
-    <div class="flex-row">
-        <div>
-        </div>
-        <div class="side-nav" ng-controller="NavCtrl as Ctrl">
-            <button class="XXX" ng-class="{ 'md-primary': Ctrl.isCurrentPath('home')}" ng-click="Ctrl.goNav('home.active');"> Home </button>
-            <button class="XXX" ng-class="{ 'md-primary': Ctrl.isCurrentPath('illustrations')}" ng-click="Ctrl.goNav('illustrations');"> Illustrations </button>
-            <button class="XXX" ng-class="{ 'md-primary': Ctrl.isCurrentPath('inventory')}" ng-click="Ctrl.goNav('inventory');"> Inventory </button>
-            <add-space heightpx="20"></add-space>
-            <div ng-show="Ctrl.jobSelected">
-                <div class="section-label" ng-click="Ctrl.toggleInput()">
-                    <h4>Input</h4></div>
-                <div ng-show="Ctrl.inputOpen">
-                   
-                </div>
-                <add-space heightpx="20"></add-space>
-                <div class="section-label" ng-click="Ctrl.toggleDesign()">
-                    <h4>Design</h4></div>
-                <div ng-show="Ctrl.designOpen">
-                    
-                </div>
-                <add-space heightpx="20"></add-space>
-                <div class="section-label" ng-click="Ctrl.toggleResult()">
-                    <h4>Results</h4></div>
-                <div ng-show="Ctrl.resultOpen">
-                   
-                </div>
+    <div class="view-container" ng-controller="NavCtrl as Ctrl">
+        <div class="header-light noprint" role="banner">
+            <div class="headerLogo" ng-click="Ctrl.goNav('login');">
+                <img src="img/evo-logo-black.png" alt="">
+            </div>
+            <div class="header-center-text"><h5>Flat Roof Proposal</h5></div>
+            <div class="header-right-text">
+                <h6>13003 Murphy Rd. Bldg. G</h6>
+                <h6>Stafford, Tx 77477</h6>
+                <h6>281-804-9669</h6>
             </div>
         </div>
-        <div ui-view class="view-container"></div>
+        <div>
+            <div ui-view></div>
+        </div>
     </div>
+   
+   
    
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
     <script src="myApp.js?v=3"></script>
@@ -68,7 +52,9 @@
     
     <!--Modules-->
     <!--Controllers-->
+    <script src="views/login/client-login.ctrl.js?v=2"></script>
     <script src="views/home/home.ctrl.js?v=2"></script>
+    <script src="views/review/review.ctrl.js?v=2"></script>
     
 </body>
 

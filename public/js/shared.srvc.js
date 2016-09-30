@@ -4,64 +4,63 @@ angular.module('app').factory('SharedSrvc', SharedSrvc);
 SharedSrvc.$inject = ['$rootScope', 'DB'];
 
 function SharedSrvc($rootScope, DB) {
+    var self = this;
     var traceMe = true;
     var myID = "SharedSrvc: ";
 
-    var service = {
-        pushData: pushData,
-        initSrvc: initSrvc,
-        returnData: returnData,
-        clone: clone,
+    self.jobObj = {};
+    var jobData = {};
+    var jobContract = {};
+    var contractDate = 0;
+
+   
+    self.initSrvc = function(){
+        // called in app run block
+    }
+    
+    self.logIn = function(jobObj) {
+        self.jobObj = jobObj;
+        jobData = JSON.parse(self.jobObj.data);
+        jobContract = JSON.parse(self.jobObj.contract);
+        contractDate = new Date(self.jobObj.submitted);
     };
 
-    return service;
-
-    function trace(msg) {
-        if (traceMe == true) {
-            console.log(msg);
-        }
+    self.returnPropertyAddress = function(){
+        var str = "";
+        str = jobData.street + ", " + jobData.city + " " + jobData.state;
+        return str;
     };
 
-    function initSrvc() {
-        
+    self.returnPropertyName = function(){
+        return jobData.property;
     };
 
 
-    function pushData(obj, set) {
+    self.pushData = function(obj, set) {
         var jsonStr = JSON.stringify(obj);
         trace(myID + "pushData : " + jsonStr);
         var DBQuery = "update" + set;
         var dataObj = {};
         dataObj.jobID = selectedJobID;
         dataObj.data = jsonStr;
-        DB.query(DBQuery, dataObj);
-        
+        DB.query(DBQuery, dataObj); 
     };
 
-    function returnData(set) {
+    self.returnData = function(set) {
         var rtnObj = {};
         switch (set) {
             case "ADMIN":
                 rtnObj = ADMIN;
                 break;
-           
         };
         return rtnObj;
     };
 
-    function setLayers() {
-        LAYERS = {
-            layerOne: { layer: '', thickness: '' },
-            layerTwo: { layer: '', thickness: '' },
-            layerThree: { layer: '', thickness: '' },
-            layerFour: { layer: '', thickness: '' },
-            layerFive: { layer: '', thickness: '' },
-            layerSix: { layer: '', thickness: '' },
-            RPANEL: { height: '', width: '', winged: '', insulation: '' }
-        };
-        return LAYERS;
+    function trace(msg) {
+        if (traceMe == true) {
+            console.log(msg);
+        }
     };
-
    
     function clone(obj) {
         var copy;
@@ -87,5 +86,7 @@ function SharedSrvc($rootScope, DB) {
         }
         throw new Error("Unable to copy obj! Its type isn't supported.");
     };
+
+    return self;
 
 };

@@ -1,0 +1,87 @@
+<div class="view-content" ng-controller="ReviewCtrl as ctrl">
+    <div class="page-title">
+        <h2>{{ctrl.propertyName}}</h2>
+        <h3>{{ctrl.propertyAddress}}</h3>
+    </div>
+    <div class="section-heading">
+        <h3>Inspection</h3></div>
+    <div class="section-content">
+        <p>An inspection of the above referenced property was made on ....</p>
+    </div>
+    <div class="section-heading">
+        <h3>Overview</h3></div>
+    <div class="section-content">
+        <p>Custom content here...</p>
+    </div>
+    <div class="section-heading">
+        <h3>Scope of Work</h3></div>
+    <div class="section-content">
+        <p>Remove all debris from the deck...</p>
+    </div>
+    <div class="section-heading">
+        <h3>Options</h3></div>
+    <div class="section-content">
+        <div class="section-sub-heading"><h4>Membrane Selection</h4></div>
+        <div>
+            <div class="table-title-row">
+                <div class="first-item"></div>
+                <div class="item">TPO</div>
+                <div class="item">PVC</div>
+                <div class="item">E/PVC</div>
+                <div class="item">E/PVC</div>
+            </div>
+            <div class="table-row">
+                <div class="first-item">36 MIL</div>
+                <div ng-class="Ctrl.gridPosition=='A1' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='A1'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='A1'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='A2' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='A2'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='A2'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='A3' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='A3'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='A3'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='A4' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='A4'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='A4'"></i></div>
+            </div>
+            <div class="table-row">
+                <div class="first-item">45 MIL</div>
+                <div ng-class="Ctrl.gridPosition=='B1' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='B1'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='B1'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='B2' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='B2'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='B2'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='B3' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='B3'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='B3'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='B4' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='B4'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='B4'"></i></div>
+            </div>
+            <div class="table-row">
+                <div class="first-item">50 MIL</div>
+                <div ng-class="Ctrl.gridPosition=='C1' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='C1'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='C1'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='C2' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='C2'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='C2'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='C3' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='C3'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='C3'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='C4' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='C4'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='C4'"></i></div>
+            </div>
+            <div class="table-row">
+                <div class="first-item">60 MIL</div>
+                <div ng-class="Ctrl.gridPosition=='D1' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='D1'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='D1'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='D2' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='D2'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='D2'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='D3' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='D3'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='D3'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='D4' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='D4'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='D4'"></i></div>
+            </div>
+            <div class="table-row">
+                <div class="first-item">80 MIL</div>
+                <div ng-class="Ctrl.gridPosition=='E1' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='E1'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='E1'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='E2' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='E2'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='E2'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='E3' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='E3'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='E3'"></i></div>
+                <div ng-class="Ctrl.gridPosition=='E4' ? 'item-selected' : 'item'" ng-click="Ctrl.gridPosition='E4'"><i class="fa fa-check fa-2x" ng-show="Ctrl.gridPosition=='E4'"></i></div>
+            </div>
+            <div class="table-title-row">
+                <div class="first-item"></div>
+                <div class="item">D4434</div>
+                <div class="item">D4434</div>
+                <div class="item">D4434</div>
+                <div class="item">D6754</div>
+            </div>
+        </div>
+    </div>
+    <div class="section-heading">
+        <h3>Exclusions</h3></div>
+    <div class="section-content">
+        <p></p>
+    </div>
+    <div class="section-heading">
+        <h3>Payment Schedule</h3></div>
+    <div class="section-content">
+        <p></p>
+    </div>
+</div>

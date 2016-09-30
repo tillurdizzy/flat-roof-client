@@ -10,7 +10,7 @@ function eventQueries($http, $q) {
     var httpPathPrefix = "http/";
 
     var queryPaths = {
-        Adhesives: httpPathPrefix + "getAdhesives.php"
+        getJobLogin: httpPathPrefix + "getJobLogin.php"
     };
 
     var trace = function(obj) {
